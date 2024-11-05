@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="rootNode" prefHeight="744.0" prefWidth="1021.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentRegisterFormController">
+   <children>
+      <Label layoutX="318.0" layoutY="40.0" text="Student Register Management" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="52.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ffae00" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="88.0" layoutY="146.0" text="Register ID" textFill="#eeecec">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtID" layoutX="88.0" layoutY="173.0" prefHeight="34.0" prefWidth="216.0" promptText="register id" />
+      <Label layoutX="88.0" layoutY="226.0" text="Name" textFill="#eeecec">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="88.0" layoutY="253.0" prefHeight="34.0" prefWidth="216.0" promptText="name" />
+      <Label layoutX="88.0" layoutY="307.0" text="Date" textFill="#eeecec">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="389.0" text="Course" textFill="#eeecec">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCourse" layoutX="88.0" layoutY="416.0" prefHeight="34.0" prefWidth="216.0" promptText="course" />
+      <Label layoutX="88.0" layoutY="470.0" prefHeight="27.0" prefWidth="97.0" text="Course Fee" textFill="#eeecec">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCourseFee" layoutX="88.0" layoutY="497.0" prefHeight="34.0" prefWidth="216.0" promptText="course fee" />
+      <DatePicker fx:id="txtDate" layoutX="88.0" layoutY="333.0" prefHeight="34.0" prefWidth="216.0" promptText="date" />
+      <Button fx:id="btnSave" layoutX="84.0" layoutY="571.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="34.0" prefWidth="97.0" style="-fx-background-color: #FFB200;" text="Save">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="207.0" layoutY="571.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="97.0" style="-fx-background-color: #FFB200;" text="Update">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="83.0" layoutY="631.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="34.0" prefWidth="97.0" style="-fx-background-color: #FFB200;" text="Delete">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClear" layoutX="207.0" layoutY="631.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="34.0" prefWidth="97.0" style="-fx-background-color: #FFB200;" text="Clear">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblStudentRegister" layoutX="346.0" layoutY="150.0" prefHeight="520.0" prefWidth="633.0">
+        <columns>
+          <TableColumn fx:id="colRegisterID" prefWidth="104.0" text="Register ID" />
+          <TableColumn fx:id="colName" prefWidth="119.0" text="Name" />
+            <TableColumn fx:id="colDate" prefWidth="126.0" text="Date" />
+            <TableColumn fx:id="colCourse" prefWidth="130.0" text="Course" />
+            <TableColumn fx:id="colCourseFee" prefWidth="153.0" text="Course Fee" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnBack" layoutX="35.0" layoutY="60.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="27.0" prefWidth="97.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css" text="Back" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

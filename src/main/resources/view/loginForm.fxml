@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.controller.LoginFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="rootNode" prefHeight="345.0" prefWidth="690.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="412.0" fitWidth="349.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/loginImage.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="349.0" layoutY="123.0" text="User Name :" textFill="#f5f0f0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="188.0" text="Password :" textFill="#f5f0f0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUseName" layoutX="461.0" layoutY="124.0" prefHeight="34.0" prefWidth="180.0" promptText="user name" />
+      <PasswordField fx:id="txtPassword" layoutX="461.0" layoutY="189.0" prefHeight="34.0" prefWidth="180.0" promptText="password" />
+      <Button fx:id="btnLogin" layoutX="503.0" layoutY="248.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="43.0" prefWidth="97.0" style="-fx-background-color: #FFB200;" text="Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="63.0" fitWidth="71.0" layoutX="516.0" layoutY="33.0">
+         <image>
+            <Image url="@../icon/lockIcon.jpg" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
