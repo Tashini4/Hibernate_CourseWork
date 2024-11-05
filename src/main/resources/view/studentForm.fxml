@@ -5,7 +5,6 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -27,35 +26,42 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <TextField fx:id="txtStudentId" layoutX="67.0" layoutY="209.0" prefHeight="40.0" prefWidth="275.0" promptText="student Id">
-         <effect>
-            <Blend />
-         </effect>
-      </TextField>
       <Label layoutX="67.0" layoutY="179.0" text="Student Id" textFill="#f2f2ef">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtName" layoutX="67.0" layoutY="296.0" prefHeight="40.0" prefWidth="275.0" promptText="name" />
+      <TextField fx:id="txtName" layoutX="67.0" layoutY="296.0" prefHeight="40.0" prefWidth="275.0" promptText="name">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <Label layoutX="67.0" layoutY="266.0" text="Name" textFill="#f2f2ef">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtPhoneNumber" layoutX="67.0" layoutY="385.0" prefHeight="40.0" prefWidth="275.0" promptText="phone number " />
+      <TextField fx:id="txtPhoneNumber" layoutX="67.0" layoutY="385.0" prefHeight="40.0" prefWidth="275.0" promptText="phone number ">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <Label layoutX="67.0" layoutY="355.0" text="Phone Number" textFill="#f2f2ef">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="67.0" layoutY="477.0" prefHeight="40.0" prefWidth="275.0" promptText="email" />
+      <TextField fx:id="txtEmail" layoutX="67.0" layoutY="477.0" prefHeight="40.0" prefWidth="275.0" promptText="email">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <Label layoutX="67.0" layoutY="447.0" text="Email" textFill="#f2f2ef">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAddress" layoutX="65.0" layoutY="570.0" prefHeight="40.0" prefWidth="275.0" promptText="address" />
+      <TextField fx:id="txtAddress" layoutX="65.0" layoutY="570.0" prefHeight="40.0" prefWidth="275.0" promptText="address">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <Label layoutX="65.0" layoutY="540.0" text="Address" textFill="#f2f2ef">
          <font>
             <Font size="20.0" />
@@ -95,5 +101,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <Label fx:id="lblStudentId" layoutX="65.0" layoutY="215.0" prefHeight="40.0" prefWidth="275.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

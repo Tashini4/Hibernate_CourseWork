@@ -2,16 +2,23 @@ package lk.ijse.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class UserFormController {
 
     @FXML
-    private TextField txtUserID;
+    private AnchorPane rootNode;
 
     @FXML
     private TextField txtName;
@@ -68,8 +75,19 @@ public class UserFormController {
     private Button btnBack;
 
     @FXML
-    void btnBackOnAction(ActionEvent event) {
+    private Label lblUserId;
 
+    @FXML
+    void btnBackOnAction(ActionEvent event) {
+        try {
+            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/dashboardForm.fxml"));
+            Stage stage = (Stage) rootNode.getScene().getWindow();
+            stage.setScene(new Scene(anchorPane));
+            stage.setTitle("Dashboard Form");
+            stage.centerOnScreen();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML

@@ -23,25 +23,33 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtID" layoutX="80.0" layoutY="180.0" prefHeight="37.0" prefWidth="222.0" promptText="programId" />
       <Label layoutX="80.0" layoutY="236.0" text="Program" textFill="#f5f3f3">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtProgram" layoutX="80.0" layoutY="263.0" prefHeight="37.0" prefWidth="222.0" promptText="program" />
+      <TextField fx:id="txtProgram" layoutX="80.0" layoutY="263.0" prefHeight="37.0" prefWidth="222.0" promptText="program">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <Label layoutX="80.0" layoutY="320.0" text="Duration" textFill="#f5f3f3">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtDuration" layoutX="80.0" layoutY="347.0" prefHeight="37.0" prefWidth="222.0" promptText="duration" />
+      <TextField fx:id="txtDuration" layoutX="80.0" layoutY="347.0" prefHeight="37.0" prefWidth="222.0" promptText="duration">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <Label layoutX="80.0" layoutY="410.0" text="Course Fee" textFill="#f5f3f3">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCourseFee" layoutX="80.0" layoutY="437.0" prefHeight="37.0" prefWidth="222.0" promptText="course fee" />
+      <TextField fx:id="txtCourseFee" layoutX="80.0" layoutY="437.0" prefHeight="37.0" prefWidth="222.0" promptText="course fee">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <Button fx:id="btnSave" layoutX="84.0" layoutY="540.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="46.0" prefWidth="97.0" style="-fx-background-color: #FFB200;" text="Save">
          <font>
             <Font size="18.0" />
@@ -90,5 +98,10 @@
             </LinearGradient>
          </stroke>
       </Line>
+      <Label fx:id="lblCourseId" layoutX="80.0" layoutY="180.0" prefHeight="37.0" prefWidth="222.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
