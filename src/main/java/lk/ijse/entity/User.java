@@ -1,9 +1,6 @@
 package lk.ijse.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
@@ -11,16 +8,15 @@ import lombok.*;
 @Data
 @Setter
 @Getter
-@Table(name = "users")
+@Entity
 
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String userId;
-    private String userName;
-    private String address;
-    private String phoneNumber;
-    private String email;
-    private String position;
+    private String user_id;
+    private String username;
+    private String Address;
+    private String user_phone;
+    private String user_email;
+    private String Position;
     private String password;
 }

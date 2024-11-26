@@ -1,17 +1,28 @@
 package lk.ijse.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Entity
+@Getter
+@Setter
 public class Student {
-    private String studentId;
-    private String studentName;
-    private String studentPhoneNumber;
-    private String email;
-    private String address;
+    @Id
+    private String stu_id;
+    private String stu_name;
+    private String stu_phone;
+    private String stu_email;
+    private String stu_address;
+
+    @OneToMany(mappedBy = "student",cascade = CascadeType.ALL)
+    private List<Student_Course> studentCourses;
+
+    @ManyToOne
+    private User user;
 
 }
