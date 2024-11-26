@@ -82,17 +82,17 @@
             <Font size="14.0" />
          </font></TextField>
       <ChoiceBox fx:id="cmbPosition" layoutX="72.0" layoutY="564.0" prefHeight="36.0" prefWidth="247.0" />
-      <TableView fx:id="tblUser" layoutX="355.0" layoutY="193.0" prefHeight="489.0" prefWidth="643.0">
+      <TableView fx:id="tblUsers" layoutX="355.0" layoutY="193.0" prefHeight="489.0" prefWidth="643.0">
         <columns>
           <TableColumn fx:id="colUserID" prefWidth="75.0" text="User ID" />
           <TableColumn fx:id="colName" prefWidth="84.0" text="Name" />
             <TableColumn fx:id="colAddress" prefWidth="93.0" text="Address" />
-            <TableColumn fx:id="colPhoneNumber" prefWidth="118.0" text="Phone Number" />
+            <TableColumn fx:id="colPhone" prefWidth="118.0" text="Phone Number" />
             <TableColumn fx:id="colEmail" prefWidth="135.0" text="Email" />
             <TableColumn fx:id="colPosition" prefWidth="137.0" text="position" />
         </columns>
       </TableView>
-      <Button fx:id="btnSave" layoutX="463.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="45.0" prefWidth="87.0" style="-fx-background-color: #FFB200;" text="Save">
+      <Button fx:id="btnAdd" layoutX="463.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="45.0" prefWidth="87.0" style="-fx-background-color: #FFB200;" text="Save">
          <font>
             <Font size="18.0" />
          </font>
@@ -117,10 +117,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="lblUserId" layoutX="68.0" layoutY="162.0" prefHeight="39.0" prefWidth="240.0" textFill="#f5f3f3">
+      <TextField fx:id="UserID" layoutX="72.0" layoutY="162.0" prefHeight="36.0" prefWidth="240.0" promptText="id">
          <font>
             <Font size="14.0" />
          </font>
-      </Label>
+      </TextField>
    </children>
 </AnchorPane>

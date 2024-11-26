@@ -2,17 +2,12 @@ package lk.ijse.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class CourseFormController {
 
@@ -20,7 +15,7 @@ public class CourseFormController {
     private AnchorPane rootNode;
 
     @FXML
-    private TextField txtProgram;
+    private TextField txtProgramName;
 
     @FXML
     private TextField txtDuration;
@@ -29,7 +24,7 @@ public class CourseFormController {
     private TextField txtCourseFee;
 
     @FXML
-    private Button btnSave;
+    private Button btnAdd;
 
     @FXML
     private Button btnUpdate;
@@ -47,31 +42,27 @@ public class CourseFormController {
     private TableColumn<?, ?> colID;
 
     @FXML
-    private TableColumn<?, ?> colProgram;
+    private TableColumn<?, ?> colProgramme;
 
     @FXML
     private TableColumn<?, ?> colDuration;
 
     @FXML
-    private TableColumn<?, ?> colCourseFee;
+    private TableColumn<?, ?> colFee;
 
     @FXML
     private Button btnBack;
 
     @FXML
-    private Label lblCourseId;
+    private Label lblCourseID;
+
+    @FXML
+    void btnAddOnAction(ActionEvent event) {
+
+    }
 
     @FXML
     void btnBackOnAction(ActionEvent event) {
-        try {
-            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/dashboardForm.fxml"));
-            Stage stage = (Stage) rootNode.getScene().getWindow();
-            stage.setScene(new Scene(anchorPane));
-            stage.setTitle("Dashboard Form");
-            stage.centerOnScreen();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
     }
 
@@ -82,11 +73,6 @@ public class CourseFormController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnSaveOnAction(ActionEvent event) {
 
     }
 

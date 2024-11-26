@@ -19,16 +19,13 @@ public class PaymentFormController {
     private TableColumn<?, ?> colPayID;
 
     @FXML
-    private TableColumn<?, ?> colStudentId;
-
-    @FXML
-    private TableColumn<?, ?> colCourseName;
+    private TableColumn<?, ?> colStudent_courseID;
 
     @FXML
     private TableColumn<?, ?> colDate;
 
     @FXML
-    private TableColumn<?, ?> colCourseFee;
+    private TableColumn<?, ?> colFee;
 
     @FXML
     private Button btnBack;

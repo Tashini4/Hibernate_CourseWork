@@ -1,15 +1,20 @@
 package lk.ijse.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@ToString
+@EqualsAndHashCode
+@Getter
+@Setter
 public class CourseDTO {
-    private String courseId;
-    private String courseName;
+    @Id
+    private String course_id;
+    private String course_name;
     private String duration;
-    private String courseFee;
+    private double course_fee;
 }

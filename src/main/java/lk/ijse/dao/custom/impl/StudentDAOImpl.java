@@ -1,4 +1,135 @@
 package lk.ijse.dao.custom.impl;
 
-public class StudentDAOImpl {
+import lk.ijse.config.FactoryConfiguration;
+import lk.ijse.dao.custom.StudentDAO;
+import lk.ijse.entity.Student;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentDAOImpl implements StudentDAO {
+    @Override
+    public boolean save(Student entity) throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(entity);
+        transaction.commit();
+        session.close();
+        return true;
+    }
+    @Override
+    public boolean update(Student entity) throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        session.update(entity);
+        transaction.commit();
+        session.close();
+        return true;
+    }
+    @Override
+    public boolean delete(String ID) throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction tx = session.beginTransaction();
+        Student student = new Student();
+        student.setStudentId(ID);
+        session.delete(student);
+        tx.commit();
+        session.close();
+        return true;
+
+    }
+    @Override
+    public List<Student> getAll() throws SQLException, ClassNotFoundException {
+        List<Student> all = new ArrayList<>();
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        all = session.createQuery("from Student").list();
+        transaction.commit();
+        session.close();
+        return all;
+    }
+
+    @Override
+    public Student searchByID(String id) throws SQLException, ClassNotFoundException {
+
+        return null;
+    }
+
+    @Override
+    public String generateNextId() throws SQLException, ClassNotFoundException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        String nextId = "";
+
+        try {
+            Object item = session.createQuery("SELECT studentId FROM Student ORDER BY studentId DESC").setMaxResults(1).uniqueResult();
+
+            if (item != null) {
+                String itemCode = item.toString();
+
+
+                if (itemCode.startsWith("S") && itemCode.length() > 1) {
+
+                    int idNum = Integer.parseInt(itemCode.substring(1));
+                    nextId = "S" + String.format("%03d", ++idNum);
+                } else {
+
+                    nextId = "S001";
+                }
+            } else {
+                nextId = "S001";
+            }
+
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return nextId;
+
+    }
+
+    @Override
+    public List<String> getIds() {
+        Session session = null;
+        Transaction transaction = null;
+        List<String> studentId = new ArrayList<>();
+
+        try {
+            session = FactoryConfiguration.getInstance().getSession();
+            transaction = session.beginTransaction();
+
+            studentId = session.createQuery("SELECT s.studentPhoneNumber FROM Student s", String.class).list();
+
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return studentId;
+    }
+
+    @Override
+    public Student searchByContact(String id) throws SQLException, ClassNotFoundException {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Student student = session.createQuery("FROM Student WHERE studentPhoneNumber = : studentPhoneNumber", Student.class).setParameter("studentPhoneNumber",id)
+                .uniqueResult();
+        transaction.commit();
+        session.close();
+        return student;
+    }
 }
+

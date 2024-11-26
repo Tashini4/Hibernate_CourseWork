@@ -2,17 +2,13 @@ package lk.ijse.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class StudentFormController {
 
@@ -32,7 +28,7 @@ public class StudentFormController {
     private TextField txtAddress;
 
     @FXML
-    private Button btnSave;
+    private Button btnAdd;
 
     @FXML
     private Button btnUpdate;
@@ -44,10 +40,10 @@ public class StudentFormController {
     private Button btnClear;
 
     @FXML
-    private TableView<?> tblStudent;
+    private TableView<?> tblStudents;
 
     @FXML
-    private TableColumn<?, ?> colStudentId;
+    private TableColumn<?, ?> colStudentID;
 
     @FXML
     private TableColumn<?, ?> colName;
@@ -62,22 +58,25 @@ public class StudentFormController {
     private TableColumn<?, ?> colAddress;
 
     @FXML
+    private TableColumn<?, ?> colUserID;
+
+    @FXML
     private Button btnBack;
 
     @FXML
-    private Label lblStudentId;
+    private Label lblStudentID;
+
+    @FXML
+    private ComboBox<?> cmbUser;
+
+    @FXML
+    void btnAddOnAction(ActionEvent event) {
+
+    }
 
     @FXML
     void btnBackOnAction(ActionEvent event) {
-        try {
-            AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/dashboardForm.fxml"));
-            Stage stage = (Stage) rootNode.getScene().getWindow();
-            stage.setScene(new Scene(anchorPane));
-            stage.setTitle("Dashboard Form");
-            stage.centerOnScreen();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
     }
 
     @FXML
@@ -85,19 +84,18 @@ public class StudentFormController {
 
     }
 
-
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void btnSaveOnAction(ActionEvent event) {
+    void btnUpdateOnAction(ActionEvent event) {
 
     }
 
     @FXML
-    void btnUpdateOnAction(ActionEvent event) {
+    void cmbUserOnAction(ActionEvent event) {
 
     }
 

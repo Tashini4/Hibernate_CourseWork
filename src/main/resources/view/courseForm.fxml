@@ -11,24 +11,24 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="744.0" prefWidth="1021.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CourseFormController">
+<AnchorPane fx:id="rootNode" prefHeight="744.0" prefWidth="1164.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CourseFormController">
    <children>
       <Label layoutX="388.0" layoutY="34.0" prefHeight="59.0" prefWidth="397.0" text="COURSE" textFill="#eeedea">
          <font>
             <Font name="Calibri Bold" size="52.0" />
          </font>
       </Label>
-      <Label layoutX="80.0" layoutY="153.0" text="ID" textFill="#f5f3f3">
+      <Label layoutX="80.0" layoutY="153.0" text="ProgramID" textFill="#f5f3f3">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="80.0" layoutY="236.0" text="Program" textFill="#f5f3f3">
+      <Label layoutX="80.0" layoutY="236.0" text="ProgramName" textFill="#f5f3f3">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtProgram" layoutX="80.0" layoutY="263.0" prefHeight="37.0" prefWidth="222.0" promptText="program">
+      <TextField fx:id="txtProgramName" layoutX="80.0" layoutY="263.0" prefHeight="37.0" prefWidth="222.0" promptText="program">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -50,7 +50,7 @@
          <font>
             <Font size="14.0" />
          </font></TextField>
-      <Button fx:id="btnSave" layoutX="84.0" layoutY="540.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="46.0" prefWidth="97.0" style="-fx-background-color: #FFB200;" text="Save">
+      <Button fx:id="btnAdd" layoutX="84.0" layoutY="540.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="46.0" prefWidth="97.0" style="-fx-background-color: #FFB200;" text="Save">
          <font>
             <Font size="18.0" />
          </font>
@@ -70,12 +70,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tblCourse" layoutX="398.0" layoutY="153.0" prefHeight="532.0" prefWidth="571.0">
+      <TableView fx:id="tblCourse" layoutX="398.0" layoutY="153.0" prefHeight="532.0" prefWidth="726.0">
         <columns>
           <TableColumn fx:id="colID" prefWidth="114.0" text="ID" />
-          <TableColumn fx:id="colProgram" prefWidth="139.0" text="Programe" />
-            <TableColumn fx:id="colDuration" prefWidth="139.0" text="Duration" />
-            <TableColumn fx:id="colCourseFee" prefWidth="178.0" text="Course Fee" />
+          <TableColumn fx:id="colProgramme" prefWidth="139.0" text="Programe" />
+            <TableColumn fx:id="colDuration" prefWidth="212.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="260.0" text="Course Fee" />
         </columns>
       </TableView>
       <Button fx:id="btnBack" layoutX="41.0" layoutY="44.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="39.0" prefWidth="78.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css" text="Back">
@@ -98,7 +98,7 @@
             </LinearGradient>
          </stroke>
       </Line>
-      <Label fx:id="lblCourseId" layoutX="80.0" layoutY="180.0" prefHeight="37.0" prefWidth="222.0">
+      <Label fx:id="lblCourseID" layoutX="80.0" layoutY="180.0" prefHeight="37.0" prefWidth="222.0" style="-fx-background-color: white;" textFill="#f2eded">
          <font>
             <Font size="14.0" />
          </font>

@@ -26,11 +26,10 @@
       </Label>
       <TableView fx:id="tblPayment" layoutX="55.0" layoutY="151.0" prefHeight="498.0" prefWidth="916.0">
         <columns>
-          <TableColumn fx:id="colPayID" prefWidth="124.0" text="PayID" />
-          <TableColumn fx:id="colStudentId" prefWidth="152.0" text="Student Id" />
-            <TableColumn fx:id="colCourseName" prefWidth="211.0" text="Course Name" />
-            <TableColumn fx:id="colDate" prefWidth="196.0" text="Date" />
-            <TableColumn fx:id="colCourseFee" prefWidth="232.0" text="Course Fee" />
+          <TableColumn fx:id="colPayID" prefWidth="153.0" text="PayID" />
+          <TableColumn fx:id="colStudent_courseID" prefWidth="269.0" text="Student_Course_Id" />
+            <TableColumn fx:id="colDate" prefWidth="232.0" text="Date" />
+            <TableColumn fx:id="colFee" minWidth="0.0" prefWidth="259.0" text="Course Fee" />
         </columns>
       </TableView>
       <Button fx:id="btnBack" layoutX="896.0" layoutY="667.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="47.0" prefWidth="89.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css" text="Back" textFill="#f5f2f2">
