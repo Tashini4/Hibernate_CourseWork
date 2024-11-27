@@ -13,9 +13,9 @@ public class BOFactory {
     public enum BOType{
         USER,STUDENT,PAYMENT,COURSE,STUDENT_COURSE,LOGIN
     }
-    public SuperBO getBO(BOType boType){
-        switch (boType){
-            case USER :
+    public SuperBO getBO(BOType boType) {
+        switch (boType) {
+            case USER:
                 return new UserBOImpl();
             case STUDENT:
                 return new StudentBOImpl();
@@ -24,9 +24,12 @@ public class BOFactory {
             case COURSE:
                 return new CourseBOImpl();
             case STUDENT_COURSE:
-                return new StudentCourseBOImpl();
+                return new Student_CourseBOImpl();
             case LOGIN:
-                return new  LoginBOImpl();
+                return new LoginBOImpl();
+            default:
+                return null;
         }
     }
 }
+

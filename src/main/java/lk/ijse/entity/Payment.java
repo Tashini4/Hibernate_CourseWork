@@ -22,4 +22,5 @@ public class Payment {
     @ManyToOne
     @JoinColumn(name = "student_course_id")
     private Student_Course student_course;
+
 }

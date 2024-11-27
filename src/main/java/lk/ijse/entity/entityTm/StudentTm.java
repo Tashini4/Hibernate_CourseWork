@@ -8,9 +8,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class StudentTm {
-    private String studentId;
-    private String studentName;
-    private String studentPhoneNumber;
-    private String studentEmail;
-    private String studentAddress;
+    private String stu_id;
+    private String stu_name;
+    private String stu_phone;
+    private String stu_email;
+    private String stu_address;
+    private String user_id;
 }

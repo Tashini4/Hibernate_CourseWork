@@ -1,8 +1,9 @@
 package lk.ijse.dto;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
+
+import java.sql.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,7 +15,9 @@ import lombok.*;
 public class PaymentDTO {
     @Id
     private String pay_id;
-    private String pay_date;
-    private String pay_amount;
+    private Date pay_date;
+    private double pay_amount;
     private Student_CourseDTO studentCourse;
+
+
 }

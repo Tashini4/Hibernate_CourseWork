@@ -20,6 +20,7 @@ public class StudentDAOImpl implements StudentDAO {
         session.close();
         return true;
     }
+
     @Override
     public boolean update(Student entity) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
@@ -29,18 +30,21 @@ public class StudentDAOImpl implements StudentDAO {
         session.close();
         return true;
     }
+
+
     @Override
     public boolean delete(String ID) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction tx = session.beginTransaction();
         Student student = new Student();
-        student.setStudentId(ID);
+        student.setStu_id(ID);
         session.delete(student);
         tx.commit();
         session.close();
         return true;
 
     }
+
     @Override
     public List<Student> getAll() throws SQLException, ClassNotFoundException {
         List<Student> all = new ArrayList<>();
@@ -65,7 +69,7 @@ public class StudentDAOImpl implements StudentDAO {
         String nextId = "";
 
         try {
-            Object item = session.createQuery("SELECT studentId FROM Student ORDER BY studentId DESC").setMaxResults(1).uniqueResult();
+            Object item = session.createQuery("SELECT stu_id FROM Student ORDER BY stu_id DESC").setMaxResults(1).uniqueResult();
 
             if (item != null) {
                 String itemCode = item.toString();
@@ -99,13 +103,13 @@ public class StudentDAOImpl implements StudentDAO {
     public List<String> getIds() {
         Session session = null;
         Transaction transaction = null;
-        List<String> studentId = new ArrayList<>();
+        List<String> stu_id = new ArrayList<>();
 
         try {
             session = FactoryConfiguration.getInstance().getSession();
             transaction = session.beginTransaction();
 
-            studentId = session.createQuery("SELECT s.studentPhoneNumber FROM Student s", String.class).list();
+            stu_id = session.createQuery("SELECT s.stu_phone FROM Student s", String.class).list();
 
             transaction.commit();
         } catch (Exception e) {
@@ -118,18 +122,17 @@ public class StudentDAOImpl implements StudentDAO {
                 session.close();
             }
         }
-        return studentId;
+        return stu_id;
     }
 
     @Override
     public Student searchByContact(String id) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-        Student student = session.createQuery("FROM Student WHERE studentPhoneNumber = : studentPhoneNumber", Student.class).setParameter("studentPhoneNumber",id)
+        Student student = session.createQuery("FROM Student WHERE stu_phone = :stu_phone", Student.class).setParameter("stu_phone",id)
                 .uniqueResult();
         transaction.commit();
         session.close();
-        return student;
-    }
+        return student;    }
 }
 

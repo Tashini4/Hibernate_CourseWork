@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="744.0" prefWidth="1321.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
+<AnchorPane prefHeight="744.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
    <children>
       <AnchorPane prefHeight="744.0" prefWidth="300.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css">
          <children>
@@ -36,7 +36,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutX="75.0" layoutY="634.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="44.0" prefWidth="120.0" styleClass="backgroundColour39" stylesheets="@../css/Style.css" text="logOut" textFill="#f5f2f2">
+            <Button fx:id="btnLogOut" layoutX="75.0" layoutY="634.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="44.0" prefWidth="120.0" styleClass="backgroundColour39" stylesheets="@../css/Style.css" text="logOut" textFill="#f5f2f2">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -46,97 +46,31 @@
                   <Image url="@../icon/user.png" />
                </image>
             </ImageView>
+            <Label fx:id="lblUserID" layoutX="74.0" layoutY="151.0" prefHeight="44.0" prefWidth="122.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="300.0" prefHeight="744.0" prefWidth="1021.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css">
+      <AnchorPane fx:id="root" layoutX="300.0" prefHeight="744.0" prefWidth="1300.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css">
          <children>
             <Label layoutX="34.0" layoutY="44.0" text="Dashboard" textFill="#2f2424">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Label>
-            <Label fx:id="txtDate" layoutX="621.0" layoutY="34.0" style="-fx-background-color: rgba;" text="Monday, 4 November" textFill="#e1d4d4">
+            <Label fx:id="txtDate" layoutX="908.0" layoutY="27.0" style="-fx-background-color: rgba;" text="Monday, 4 November" textFill="#e1d4d4">
                <font>
                   <Font name="System Italic" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="txtTime" layoutX="870.0" layoutY="34.0" text="23:48:50" textFill="#e4d9d9">
+            <Label fx:id="txtTime" layoutX="1157.0" layoutY="27.0" text="23:48:50" textFill="#e4d9d9">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="58.0" layoutY="123.0" prefHeight="545.0" prefWidth="906.0" style="-fx-background-color: black;">
+            <AnchorPane layoutX="167.0" layoutY="161.0" prefHeight="514.0" prefWidth="869.0">
                <children>
-                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="188.0" prefWidth="282.0" style="-fx-background-color: white;">
-                     <children>
-                        <ImageView fitHeight="200.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icon/image2.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="296.0" layoutY="14.0" prefHeight="188.0" prefWidth="275.0">
-                     <children>
-                        <AnchorPane prefHeight="188.0" prefWidth="282.0" style="-fx-background-color: white;">
-                           <children>
-                              <ImageView fitHeight="188.0" fitWidth="282.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../icon/image4.jpg" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <ImageView fitHeight="147.0" fitWidth="200.0" layoutX="473.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="589.0" fitWidth="870.0" layoutX="67.0" layoutY="-44.0">
                      <image>
-                        <Image url="@../icon/image8.jpeg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="168.0" fitWidth="265.0" layoutX="24.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image6.jpeg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="282.0" layoutX="248.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image10.jpeg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="188.0" fitWidth="317.0" layoutX="578.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image1.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="223.0" layoutX="673.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image5.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="160.0" fitWidth="317.0" layoutX="24.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image3.jpeg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="194.0" fitWidth="200.0" layoutX="388.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image11.jpg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="194.0" fitWidth="368.0" layoutX="549.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image12.jpeg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="178.0" fitWidth="200.0" layoutX="248.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image13.jpeg" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="120.0" layoutX="783.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icon/image14.jpg" />
+                        <Image url="@../icon/icon1.png" />
                      </image>
                   </ImageView>
                </children>

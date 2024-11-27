@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 public class LoginBOImpl implements LoginBO {
     LoginDAO loginDAO = (LoginDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOType.LOGIN);
+
     @Override
     public boolean save(LoginDTO dto) throws Exception {
         return loginDAO.save(new Login(dto.getLogin(),dto.getUserID(),dto.getDate()));

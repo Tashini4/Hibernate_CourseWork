@@ -19,14 +19,17 @@ public class LoginDAOImpl implements LoginDAO {
         session.close();
         return true;
     }
+
     @Override
     public boolean update(Login entity) throws Exception {
         return false;
     }
+
     @Override
     public boolean delete(String ID) throws Exception {
         return false;
     }
+
     @Override
     public List<Login> getAll() throws SQLException, ClassNotFoundException {
         return List.of();

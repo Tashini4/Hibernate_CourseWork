@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="744.0" prefWidth="1164.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CourseFormController">
+<AnchorPane fx:id="rootNode" prefHeight="744.0" prefWidth="1300.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CourseFormController">
    <children>
       <Label layoutX="388.0" layoutY="34.0" prefHeight="59.0" prefWidth="397.0" text="COURSE" textFill="#eeedea">
          <font>
@@ -28,7 +28,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtProgramName" layoutX="80.0" layoutY="263.0" prefHeight="37.0" prefWidth="222.0" promptText="program">
+      <TextField fx:id="txtProgramName" layoutX="80.0" layoutY="263.0" onKeyPressed="#Programme_Name" prefHeight="37.0" prefWidth="222.0" promptText="program">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -46,7 +46,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCourseFee" layoutX="80.0" layoutY="437.0" prefHeight="37.0" prefWidth="222.0" promptText="course fee">
+      <TextField fx:id="txtCourseFee" layoutX="80.0" layoutY="437.0" onKeyPressed="#Course_Fee" prefHeight="37.0" prefWidth="222.0" promptText="course fee">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -70,12 +70,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tblCourse" layoutX="398.0" layoutY="153.0" prefHeight="532.0" prefWidth="726.0">
+      <TableView fx:id="tblCourse" layoutX="398.0" layoutY="153.0" prefHeight="532.0" prefWidth="879.0">
         <columns>
-          <TableColumn fx:id="colID" prefWidth="114.0" text="ID" />
-          <TableColumn fx:id="colProgramme" prefWidth="139.0" text="Programe" />
-            <TableColumn fx:id="colDuration" prefWidth="212.0" text="Duration" />
-            <TableColumn fx:id="colFee" prefWidth="260.0" text="Course Fee" />
+          <TableColumn fx:id="colID" prefWidth="157.0" text="ID" />
+          <TableColumn fx:id="colProgramme" prefWidth="201.0" text="Programe" />
+            <TableColumn fx:id="colDuration" prefWidth="267.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="253.0" text="Course Fee" />
         </columns>
       </TableView>
       <Button fx:id="btnBack" layoutX="41.0" layoutY="44.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="39.0" prefWidth="78.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css" text="Back">
@@ -88,7 +88,7 @@
             <Font name="Calibri Bold" size="52.0" />
          </font>
       </Label>
-      <Line endX="475.0" layoutX="491.0" layoutY="103.0" startX="-101.0" strokeWidth="3.0">
+      <Line endX="294.0" layoutX="491.0" layoutY="103.0" startX="-101.0" strokeWidth="3.0">
          <stroke>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>

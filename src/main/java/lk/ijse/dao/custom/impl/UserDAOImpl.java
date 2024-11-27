@@ -12,7 +12,7 @@ import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
     @Override
-    public boolean save(User entity){
+    public boolean save(User entity) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction tx = session.beginTransaction();
         session.save(entity);
@@ -20,8 +20,9 @@ public class UserDAOImpl implements UserDAO {
         session.close();
         return true;
     }
+
     @Override
-    public boolean update(User entity){
+    public boolean update(User entity) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction tx = session.beginTransaction();
         session.update(entity);
@@ -29,18 +30,21 @@ public class UserDAOImpl implements UserDAO {
         session.close();
         return true;
     }
+
     @Override
-    public boolean delete(String ID){
+    public boolean delete(String ID) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction tx = session.beginTransaction();
         User user = new User();
+        user.setUser_id(ID);
         session.delete(user);
         tx.commit();
         session.close();
         return true;
     }
+
     @Override
-    public List<User> getAll(){
+    public List<User> getAll() throws SQLException, ClassNotFoundException {
         List<User> all = new ArrayList<>();
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -48,8 +52,8 @@ public class UserDAOImpl implements UserDAO {
         transaction.commit();
         session.close();
         return all;
-
     }
+
     @Override
     public User searchByID(String id) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfiguration.getInstance().getSession();
@@ -59,6 +63,7 @@ public class UserDAOImpl implements UserDAO {
         session.close();
         return user;
     }
+    @Override
     public User searchByUsername(String username) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
@@ -68,6 +73,8 @@ public class UserDAOImpl implements UserDAO {
         session.close();
         return user;
     }
+
+
     @Override
     public String generateNextId() throws SQLException, ClassNotFoundException {
         Session session = FactoryConfiguration.getInstance().getSession();
@@ -103,6 +110,7 @@ public class UserDAOImpl implements UserDAO {
 
         return nextId;
     }
+
     @Override
     public List<String> getIds() {
         return List.of();
@@ -133,4 +141,5 @@ public class UserDAOImpl implements UserDAO {
         }
         return userIds;
     }
+
 }

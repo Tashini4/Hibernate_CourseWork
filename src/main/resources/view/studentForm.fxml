@@ -9,11 +9,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="744.0" prefWidth="1200.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
+<AnchorPane fx:id="rootNode" prefHeight="744.0" prefWidth="1300.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
    <children>
-      <Label layoutX="390.0" layoutY="34.0" text="Student Manage">
+      <Label layoutX="421.0" layoutY="31.0" text="Student Manage">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
@@ -41,7 +42,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtPhoneNumber" layoutX="67.0" layoutY="385.0" prefHeight="40.0" prefWidth="275.0" promptText="phone number ">
+      <TextField fx:id="txtPhoneNumber" layoutX="67.0" layoutY="385.0" onKeyPressed="#Phone" prefHeight="40.0" prefWidth="275.0" promptText="phone number ">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -50,7 +51,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="67.0" layoutY="477.0" prefHeight="40.0" prefWidth="275.0" promptText="email">
+      <TextField fx:id="txtEmail" layoutX="67.0" layoutY="477.0" onKeyPressed="#Email" prefHeight="40.0" prefWidth="275.0" promptText="email">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -59,7 +60,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtAddress" layoutX="65.0" layoutY="570.0" prefHeight="40.0" prefWidth="275.0" promptText="address">
+      <TextField fx:id="txtAddress" layoutX="65.0" layoutY="570.0" onKeyPressed="#Address" prefHeight="40.0" prefWidth="275.0" promptText="address">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -68,34 +69,34 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnAdd" layoutX="577.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #FFB200;" text="Save" textFill="#282525">
+      <Button fx:id="btnAdd" layoutX="608.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #FFB200;" text="Save" textFill="#282525">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnUpdate" layoutX="682.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #FFB200;" text="Update" textFill="#282525">
+      <Button fx:id="btnUpdate" layoutX="713.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #FFB200;" text="Update" textFill="#282525">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnDelete" layoutX="786.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #FFB200;" text="Delete" textFill="#282525">
+      <Button fx:id="btnDelete" layoutX="817.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #FFB200;" text="Delete" textFill="#282525">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnClear" layoutX="892.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #FFB200;" text="Clear" textFill="#282525">
+      <Button fx:id="btnClear" layoutX="923.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="85.0" style="-fx-background-color: #FFB200;" text="Clear" textFill="#282525">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tblStudents" layoutX="383.0" layoutY="223.0" prefHeight="479.0" prefWidth="770.0">
+      <TableView fx:id="tblStudents" layoutX="383.0" layoutY="223.0" onKeyPressed="#Name" prefHeight="479.0" prefWidth="878.0">
         <columns>
-          <TableColumn fx:id="colStudentID" prefWidth="94.0" text="Student Id" />
-          <TableColumn fx:id="colName" prefWidth="90.0" text="Name" />
-            <TableColumn fx:id="colPhoneNumber" prefWidth="146.0" text="Phone Number" />
-            <TableColumn fx:id="colEmail" prefWidth="105.0" text="Email" />
-            <TableColumn fx:id="colAddress" prefWidth="184.0" text="Address" />
-            <TableColumn fx:id="colUserID" prefWidth="150.0" text="UserID" />
+          <TableColumn fx:id="colStudentID" prefWidth="113.0" text="Student Id" />
+          <TableColumn fx:id="colName" prefWidth="140.0" text="Name" />
+            <TableColumn fx:id="colPhoneNumber" prefWidth="163.0" text="Phone Number" />
+            <TableColumn fx:id="colEmail" prefWidth="150.0" text="Email" />
+            <TableColumn fx:id="colAddress" prefWidth="169.0" text="Address" />
+            <TableColumn fx:id="colUserID" prefWidth="142.0" text="UserID" />
         </columns>
       </TableView>
       <Button fx:id="btnBack" layoutX="35.0" layoutY="670.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="85.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css" text="Back" textFill="#f5f5f5">
@@ -109,5 +110,15 @@
          </font>
       </Label>
       <ComboBox fx:id="cmbUser" layoutX="65.0" layoutY="131.0" onAction="#cmbUserOnAction" prefHeight="40.0" prefWidth="247.0" promptText="userID" />
+      <Line endX="271.0" endY="-2.0" layoutX="524.0" layoutY="103.0" startX="-101.0" strokeWidth="3.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ffae00" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
    </children>
 </AnchorPane>
