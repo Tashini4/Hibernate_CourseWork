@@ -95,7 +95,7 @@ public class UserFormController {
         setCellValueFactory();
         loadAllUser();
         generateNextUserId();
-        //lastLoginID();
+        lastLoginID();
         setTableAction();
         setPosition();
     }
@@ -122,10 +122,10 @@ public class UserFormController {
         });
     }
 
- /*   private void lastLoginID() throws SQLException, ClassNotFoundException {
+    private void lastLoginID() throws SQLException, ClassNotFoundException {
         Login login = loginDAO.getLastLogin();
         UserID(login.getUserID());
-    }*/
+    }
 
     private void UserID(String ID) throws SQLException, ClassNotFoundException {
         User user = userBO.searchByIdUser(ID);

@@ -48,7 +48,10 @@
                   <Image url="@../icon/user.png" />
                </image>
             </ImageView>
-            <Label fx:id="lblUserID" layoutX="74.0" layoutY="151.0" prefHeight="44.0" prefWidth="122.0" />
+            <Label fx:id="lblUserID" layoutX="82.0" layoutY="151.0" prefHeight="44.0" prefWidth="122.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="root" layoutX="300.0" prefHeight="744.0" prefWidth="1300.0" styleClass="backgroundColour37" stylesheets="@../css/Style.css">

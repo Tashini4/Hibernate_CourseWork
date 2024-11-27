@@ -38,7 +38,7 @@ public class LoginFormController {
     private Button btnLogin;
 
     public void initialize() throws SQLException, ClassNotFoundException {
-       generateNextID();
+        generateNextID();
     }
 
     private void generateNextID() throws SQLException, ClassNotFoundException {
@@ -88,4 +88,3 @@ public class LoginFormController {
         }
     }
 }
-

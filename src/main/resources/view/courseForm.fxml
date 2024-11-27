@@ -98,7 +98,7 @@
             </LinearGradient>
          </stroke>
       </Line>
-      <Label fx:id="lblCourseID" layoutX="80.0" layoutY="180.0" prefHeight="37.0" prefWidth="222.0" style="-fx-background-color: white;" textFill="#f2eded">
+      <Label fx:id="lblCourseID" layoutX="80.0" layoutY="180.0" prefHeight="37.0" prefWidth="222.0" style="-fx-background-color: white;" textFill="#111010">
          <font>
             <Font size="14.0" />
          </font>

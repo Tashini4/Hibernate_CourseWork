@@ -84,24 +84,24 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="lblStudentName1" layoutX="55.0" layoutY="205.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#f5efef">
+      <Label fx:id="lblStudentName1" layoutX="55.0" layoutY="205.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#221f1f">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <ComboBox fx:id="cmbStudentPhoneNumber" layoutX="31.0" layoutY="109.0" onAction="#cmbStudentOnAction" prefHeight="34.0" prefWidth="197.0" promptText="Select Student Contact" />
       <ComboBox fx:id="cmbCourseName" layoutX="284.0" layoutY="109.0" onAction="#cmbCourseOnAction" prefHeight="34.0" prefWidth="197.0" promptText="Select Course Name" />
-      <Label fx:id="lblCourseID" layoutX="55.0" layoutY="367.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#f5efef">
+      <Label fx:id="lblCourseID" layoutX="55.0" layoutY="367.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#2c2929">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblStudentID" layoutX="55.0" layoutY="288.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#f5efef">
+      <Label fx:id="lblStudentID" layoutX="55.0" layoutY="288.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#282525">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblFee1" layoutX="55.0" layoutY="448.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#f5efef">
+      <Label fx:id="lblFee1" layoutX="55.0" layoutY="448.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#2c2727">
          <font>
             <Font size="14.0" />
          </font>
@@ -111,12 +111,12 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="lblPaymentId1" layoutX="55.0" layoutY="525.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#f5efef">
+      <Label fx:id="lblPaymentId1" layoutX="55.0" layoutY="525.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#251f1f">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblDate1" layoutX="55.0" layoutY="603.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#f5efef">
+      <Label fx:id="lblDate1" layoutX="55.0" layoutY="603.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#141212">
          <font>
             <Font size="14.0" />
          </font>
@@ -126,7 +126,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="lblStudentCourseId1" layoutX="55.0" layoutY="678.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#f5efef">
+      <Label fx:id="lblStudentCourseId1" layoutX="55.0" layoutY="678.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#0d0c0c">
          <font>
             <Font size="14.0" />
          </font>
@@ -136,7 +136,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="lblDuration" layoutX="304.0" layoutY="675.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#f5efef">
+      <Label fx:id="lblDuration" layoutX="304.0" layoutY="675.0" prefHeight="34.0" prefWidth="216.0" style="-fx-background-color: white;" textFill="#252020">
          <font>
             <Font size="14.0" />
          </font>
