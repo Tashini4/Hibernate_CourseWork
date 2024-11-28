@@ -100,7 +100,6 @@ public class UserFormController {
         setPosition();
     }
 
-
     private void setPosition() {
         ObservableList<String> position = FXCollections.observableArrayList();
 
