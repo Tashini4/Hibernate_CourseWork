@@ -1,5 +1,8 @@
 package lk.ijse.controller;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import lk.ijse.dao.DAOFactory;
 import lk.ijse.dao.custom.LoginDAO;
 import lk.ijse.entity.Login;
@@ -16,6 +20,8 @@ import lk.ijse.entity.Login;
 import java.io.IOException;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class DashboardFormController {
     public Label lblUserID;
@@ -49,6 +55,20 @@ public class DashboardFormController {
 
     public void initialize(){
         lastLoginID();
+
+        Date date = Date.valueOf(LocalDate.now());
+        lblDate.setText(String.valueOf(date));
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1),event -> {
+            LocalTime currentTime = LocalTime.now();
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+            String formattedTime = currentTime.format(formatter);
+
+            lblTime.setText(formattedTime);
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();;
     }
 
     private void lastLoginID() {

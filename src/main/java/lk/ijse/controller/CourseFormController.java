@@ -137,17 +137,17 @@ public class CourseFormController {
         String position = user.getPosition();
 
         if (position.equals("Admin")){
-            btnBack.setDisable(false);
-            btnClear.setDisable(false);
-            btnAdd.setDisable(true);
-            btnUpdate.setDisable(true);
-            btnDelete.setDisable(true);
-        }else if(position.equals("Admissions Coordinator")){
             btnAdd.setDisable(false);
             btnUpdate.setDisable(false);
             btnDelete.setDisable(false);
             btnBack.setDisable(false);
             btnClear.setDisable(false);
+        }else if(position.equals("Admissions Coordinator")){
+            btnBack.setDisable(false);
+            btnClear.setDisable(false);
+            btnAdd.setDisable(true);
+            btnUpdate.setDisable(true);
+            btnDelete.setDisable(true);
         }
     }
 
